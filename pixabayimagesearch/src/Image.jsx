@@ -5,7 +5,7 @@ class Image extends React.Component {
     render() {
         return (
             <div> 
-                <img src={this.props.url} style={{ width: this.props.width * 0.75, height: this.props.height * 0.75 }} />
+                <img src={this.props.url} style={{ width: 400, height: 400 }} />
             </div>
         )
     }
