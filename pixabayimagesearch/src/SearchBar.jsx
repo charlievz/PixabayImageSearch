@@ -17,10 +17,10 @@ class SearchBar extends React.Component {
     };
     render() {
         return (
-            <div style={{textAlign: 'center'}}> 
+            <div style={{textAlign: 'center', padding: 20}}> 
                 <form onSubmit={this.onSubmit}>
                     <label>Search:</label>
-                    <input type="text" value={this.state.searchTerm} onChange={this.onSearchChange}/>
+                    <input type="text" value={this.state.searchTerm} onChange={this.onSearchChange} style={{marginLeft: 10}}/>
                 </form>
             </div> 
         )

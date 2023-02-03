@@ -7,7 +7,18 @@ class ImageList extends React.Component {
     render() {
         return ( 
             <div className="imageList" id="imageList">
-                {this.props.images && this.props.images.map(image => <Image key={image.id} url={image.largeImageURL} width={image.webformatWidth} height={image.webformatHeight} />)}
+                {
+                    this.props.images && 
+                    this.props.images.map(image => 
+                        <Image key={image.id} 
+                            url={image.largeImageURL} 
+                            width={image.webformatWidth} 
+                            height={image.webformatHeight}
+                            user={image.user}
+                            tags={image.tags} 
+                        />
+                    )
+                }
             </div>
         )
     }
