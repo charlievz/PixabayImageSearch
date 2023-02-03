@@ -11,7 +11,7 @@ class Image extends React.Component {
                     modal
                     trigger={
                         <button style={{backgroundColor: 'transparent', border: 'none', cursor: 'pointer'}}>
-                            <img src={this.props.url} style={{ width: 300, height: 300 }} />
+                            <img src={this.props.url} style={{ width: 400, height: 400 }} />
                         </button>
                     }>
                     <div>

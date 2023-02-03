@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   onSearch = async (query) => {
-    const response = await axios.get('https://pixabay.com/api', { params: { key: encodeURIComponent('33327267-588fd4c3de8f4bc0f1d8227e9'), q: encodeURIComponent(query), per_page: 16 }});
+    const response = await axios.get('https://pixabay.com/api', { params: { key: encodeURIComponent('33327267-588fd4c3de8f4bc0f1d8227e9'), q: encodeURIComponent(query), per_page: 9 }});
     this.setState({ images: response.data.hits, query: query });
   }
   isBottom(el) {
@@ -39,7 +39,7 @@ class App extends React.Component {
   };
   pagedSearch = async () => {
     const { query, page } = this.state;
-    const response = await axios.get('https://pixabay.com/api', { params: { key: encodeURIComponent('33327267-588fd4c3de8f4bc0f1d8227e9'), q: encodeURIComponent(query), per_page: 16, page: page + 1 }});
+    const response = await axios.get('https://pixabay.com/api', { params: { key: encodeURIComponent('33327267-588fd4c3de8f4bc0f1d8227e9'), q: encodeURIComponent(query), per_page: 9, page: page + 1 }});
     this.setState({  page: page + 1 });
     return response.data.hits;
   }
